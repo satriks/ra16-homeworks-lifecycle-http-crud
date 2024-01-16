@@ -12,7 +12,7 @@ export default function NewCard({setCards} : Props){
         CardService.create(v4(),(eventTarget.parentElement as HTMLFormElement).text .value );
         
         (eventTarget.parentElement as HTMLFormElement).reset();
-        }
+        
        
         const getCards = async () => {
             const data =  await CardService.getAll()
@@ -20,7 +20,7 @@ export default function NewCard({setCards} : Props){
         }
 
         setTimeout(() => void getCards(), 200)
-
+    }
 
     return (
         <form className="newCard">

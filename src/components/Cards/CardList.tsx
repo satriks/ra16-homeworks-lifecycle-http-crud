@@ -1,6 +1,7 @@
 import { useEffect } from "react"
 import Card from "./Card"
 import CardService from "../CardService"
+import { v4 } from "uuid"
 
 interface CardProps{
     cards : {id:string, content:string}[],
@@ -23,7 +24,7 @@ export default function CardList({cards, setCards} : CardProps){
 
     return (
         <div className="post__wrapper">
-            {cards.map(el => {return ( <Card data={el} setCards={setCards}/>)})}
+            {cards.map(el => {return ( <Card data={el} setCards={setCards} key={v4()} />)})}
         </div>
     )
 }
