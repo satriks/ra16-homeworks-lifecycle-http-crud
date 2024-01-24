@@ -17,7 +17,7 @@ export default function CardList({cards, setCards} : CardProps){
             setCards(data);
         };
         void getCards();
-    }, [ setCards]);
+    }, [setCards]);
     
     return (
         <div className="post__wrapper">
