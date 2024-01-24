@@ -9,14 +9,15 @@ export default function Card({data, setCards} : Props) {
 
     const onClick = () => {
         
-        CardService.delete(data.id)
-
         const getCards = async () => {
-            const data =  await CardService.getAll()
-            setCards(data)
-        }
-        setTimeout(() => void getCards(), 0)
-    }
+           await CardService.delete(data.id);
+           setTimeout( async () => {
+            const res = await CardService.getAll();
+            setCards(res);
+           }, 100 );           
+        };
+        void getCards();
+    };
 
     return (
         <div className="post" id={data.id}>

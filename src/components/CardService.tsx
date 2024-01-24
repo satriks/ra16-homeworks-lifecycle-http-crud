@@ -8,15 +8,15 @@ export default class CardService {
     static async getAll(): Promise<[]>{
         const res = await instance.get("/notes")
         return res.data 
-    }
+    };
 
     static async create(id: string , content: string){
          instance.post("/notes", { id, content })
-    }
+    };
 
     static async delete(id : string){
          instance.delete(`/notes/${id}`)
-    }
+    };
 
   
 }

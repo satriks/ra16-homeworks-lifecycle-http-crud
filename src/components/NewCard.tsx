@@ -8,19 +8,15 @@ export default function NewCard({setCards} : Props){
     const onClick = (event: React.MouseEvent) => {
         event.preventDefault();
         const eventTarget  = event.target as HTMLElement;
-
         CardService.create(v4(),(eventTarget.parentElement as HTMLFormElement).text .value );
-        
         (eventTarget.parentElement as HTMLFormElement).reset();
         
-       
         const getCards = async () => {
             const data =  await CardService.getAll()
             setCards(data)
-        }
-
-        setTimeout(() => void getCards(), 200)
-    }
+        };
+        setTimeout(() => void getCards(), 200);
+    };
 
     return (
         <form className="newCard">

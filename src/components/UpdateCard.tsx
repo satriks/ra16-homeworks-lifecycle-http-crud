@@ -7,12 +7,11 @@ export default function UpdateCard({setCards}:Props){
 
     const onClick = () => {
         const getCards = async () => {
-            const data =  await CardService.getAll()
-            setCards(data)
-        }
-
-        void getCards()
-    }
+            const data =  await CardService.getAll();
+            setCards(data);
+        };
+        void getCards();
+    };
 
     return (
         <div className="update__wrapper">
