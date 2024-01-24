@@ -8,7 +8,6 @@ interface Props{
 export default function Card({data, setCards} : Props) {
 
     const onClick = () => {
-        
         const getCards = async () => {
            await CardService.delete(data.id);
            setTimeout( async () => {
