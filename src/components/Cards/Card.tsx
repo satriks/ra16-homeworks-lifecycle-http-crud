@@ -1,11 +1,11 @@
 import CardService from "../CardService"
 
 interface Props{
-    data: {id:string, content:string},
-    setCards : React.Dispatch<React.SetStateAction<never[]>>
+    data: {id: string, content: string},
+    setCards: React.Dispatch<React.SetStateAction<never[]>>
 }
 
-export default function Card({data, setCards} : Props) {
+export default function Card({data, setCards}: Props) {
 
     const onClick = () => {
         const getCards = async () => {

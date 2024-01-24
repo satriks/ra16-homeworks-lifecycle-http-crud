@@ -11,7 +11,7 @@ export default class CardService {
     }
 
     static async create(id: string , content: string){
-         instance.post("/notes", { id, content })
+         instance.post("/notes", {id, content})
     }
 
     static async delete(id : string){

@@ -3,7 +3,7 @@ import { Props } from "../model/models"
 
 
 
-export default function UpdateCard({setCards}:Props){
+export default function UpdateCard({setCards}: Props){
 
     const onClick = () => {
         const getCards = async () => {

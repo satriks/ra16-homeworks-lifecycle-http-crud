@@ -5,11 +5,11 @@ import { v4 } from "uuid"
 
 
 interface CardProps{
-    cards : {id:string, content:string}[],
-    setCards : React.Dispatch<React.SetStateAction<never[]>>
+    cards: {id: string, content: string}[],
+    setCards: React.Dispatch<React.SetStateAction<never[]>>
 }
 
-export default function CardList({cards, setCards} : CardProps){
+export default function CardList({cards, setCards}: CardProps){
 
     useEffect(  () => {
         const getCards = async () => {

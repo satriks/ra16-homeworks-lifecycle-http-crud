@@ -3,7 +3,7 @@ import CardService from "./CardService"
 import { v4 } from "uuid"
 
 
-export default function NewCard({setCards} : Props){
+export default function NewCard({setCards}: Props){
 
     const onClick = (event: React.MouseEvent) => {
         event.preventDefault();
